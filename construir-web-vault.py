@@ -23,14 +23,16 @@ BRANDING = BASE / "branding"
 CLAVES_SITIO = ("bitWebVault",)
 
 
-# Aviso de atribución que la bóveda muestra al pie, por idioma (se deja vacío y se
-# oculta con ESTILO_INDEX; la licencia y el código fuente se ofrecen en los términos del servicio)
+# Aviso de atribución que la bóveda muestra al pie, por idioma. Se conserva traducido y se
+# le agrega la dirección del código fuente (GPL-3.0 secs. 5 y 6). {CODIGO_FUENTE} sale de marca.env.
 PIE = {
     "es": {
         " A modified version of the Bitwarden\u00ae Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden\u00ae server).":
-            "",
+            " Versión modificada de la bóveda web de Bitwarden\u00ae para Vaultwarden (una reimplementación no oficial"
+            " del servidor de Bitwarden\u00ae), adaptada por 2Conexión.",
         " Vaultwarden is not associated with the Bitwarden\u00ae project nor Bitwarden Inc. ":
-            "",
+            " Ni 2Conexión ni Vaultwarden están asociados con el proyecto Bitwarden\u00ae ni con Bitwarden Inc."
+            " Código fuente y licencias (GPL-3.0 / AGPL-3.0): {CODIGO_FUENTE} ",
     },
 }
 
@@ -65,8 +67,6 @@ ESTILO_INDEX = (
     ".theme_dark img.new-logo-themed{content:url(images/logo-white.svg)}"
     # Enlace "Más información" del aviso de Send: lleva a la ayuda de bitwarden.com
     'a[href="https://bitwarden.com/help/receive-send/"]{display:none!important}'
-    # Renglón del aviso de atribución en el pie (vacío)
-    "bit-landing-footer footer>div:last-child{display:none!important}"
     "</style>"
 )
 
@@ -176,7 +176,7 @@ def marcar_js(destino, m):
 
     # Aviso de atribución del pie (se conserva, traducido)
     for ingles, traducido in PIE.get(m["IDIOMA"], {}).items():
-        js = reemplazar(js, ingles, js_str(traducido), 1, ruta.name)
+        js = reemplazar(js, ingles, js_str(traducido.replace("{CODIGO_FUENTE}", m["CODIGO_FUENTE"])), 1, ruta.name)
 
     # Logotipos incrustados como SVG: se identifican por su viewBox
     for viewbox, archivo in (("0 0 60 60", "inline-icon.svg"),

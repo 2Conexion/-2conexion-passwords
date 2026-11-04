@@ -17,7 +17,7 @@ El script toma `/web-vault` de la imagen oficial, borra los mapas de código fue
 - Se agrega `lang="es"`.
 - Al script principal se le agrega un sello de construcción (`?m=AAAAMMDDhhmmss`) para que los navegadores no usen una copia vieja.
 - La pantalla de carga pierde las dos ilustraciones de las esquinas.
-- Se agregan estilos en línea: fondo con los colores de la marca, logo de 2Conexión y ocultar el enlace "Más información" de Send, que lleva a bitwarden.com.
+- Se agregan estilos en línea: fondo con los colores de la marca, logo de 2Conexión y ocultar el enlace "Más información" de Send, que lleva a bitwarden.com. El renglón del aviso de atribución del pie ya no se oculta.
 - Las dos hojas de estilo pasan al final del `<body>`.
 
 **`manifest.json`**: nombre, nombre corto y color de la marca.
@@ -27,7 +27,9 @@ El script toma `/web-vault` de la imagen oficial, borra los mapas de código fue
 - El emisor de los códigos TOTP (`otpauth://totp/`) pasa a ser "2Conexion Passwords".
 - El idioma inicial ya no es el del navegador, sino el de `marca.env` (`es`). Cada usuario puede cambiarlo en Ajustes > Preferencias.
 - Los tres logotipos SVG incrustados (viewBox `0 0 60 60`, `0 0 290 60` y `0 0 800 200`) se sustituyen por los de `branding/images/inline-*.svg`.
-- **Aviso de atribución del pie.** En la versión actual, sus dos frases ("A modified version of the Bitwarden® Web Vault for Vaultwarden…" y "Vaultwarden is not associated with the Bitwarden® project nor Bitwarden Inc.") se dejan vacías y el renglón se oculta con CSS. ⚠️ Está previsto restaurarlo en español, con la dirección de este repositorio, antes de que el servicio se ofrezca al público.
+- **Aviso de atribución del pie** (restaurado el 4 de noviembre de 2026). Sus dos frases se traducen al español y se les agrega la dirección de este repositorio (`CODIGO_FUENTE` en `branding/marca.env`):
+  - "A modified version of the Bitwarden® Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden® server)." pasa a ser "Versión modificada de la bóveda web de Bitwarden® para Vaultwarden (una reimplementación no oficial del servidor de Bitwarden®), adaptada por 2Conexión.";
+  - "Vaultwarden is not associated with the Bitwarden® project nor Bitwarden Inc." pasa a ser "Ni 2Conexión ni Vaultwarden están asociados con el proyecto Bitwarden® ni con Bitwarden Inc. Código fuente y licencias (GPL-3.0 / AGPL-3.0): https://github.com/2Conexion/-2conexion-passwords".
 
 **`locales/*/messages.json`**
 - En la clave `bitWebVault`, "Bitwarden" pasa a ser "2Conexión Passwords" en todos los idiomas.
@@ -56,3 +58,8 @@ Los originales se descargan de `src/static/templates/{email,admin}` de la etique
 
 - La criptografía, la sincronización, la API, el almacenamiento y cualquier otra lógica de Vaultwarden o de la bóveda web.
 - Las aplicaciones de Bitwarden para navegador, celular y escritorio: se usan las oficiales.
+
+## Historial
+
+- 2026-11-04: primera publicación (Vaultwarden 1.37.5, bóveda web v2026.10.1).
+- 2026-11-04: se restaura el aviso de atribución del pie, en español y con la dirección de este repositorio.
