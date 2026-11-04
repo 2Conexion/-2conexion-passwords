@@ -1,0 +1,80 @@
+/* Estilos propios de 2Conexión Passwords. Se compilan junto con los estilos integrados de Vaultwarden.
+   Los logos se reemplazan en construir-web-vault.py; aquí van colores y fondo.
+   Referencia: https://github.com/dani-garcia/vaultwarden/wiki/Customize-Vaultwarden-CSS */
+
+/* Paleta de la marca (verde azulado del emblema) en lugar del azul original */
+:root {
+  --color-brand-050: #eef7f8;
+  --color-brand-100: #d9edf0;
+  --color-brand-200: #b5dbe1;
+  --color-brand-300: #84c1cb;
+  --color-brand-400: #55a3b1;
+  --color-brand-500: #368897;
+  --color-brand-600: #2a7281;
+  --color-brand-700: #1f6170;
+  --color-brand-800: #1a505d;
+  --color-brand-900: #173f4a;
+  --color-brand-950: #0f2a32;
+  --color-brand-950-rgb: 15, 42, 50;
+
+  /* Menú lateral */
+  --color-nav-bg-primary: #12323b;
+  --color-nav-bg-primary-strong: #0c2329;
+}
+
+:root:not(.theme_dark) {
+  --color-primary-100: 217 237 240;
+  --color-primary-600: 31 97 112;
+  --color-primary-700: 23 71 83;
+  --color-background-alt2: 31 97 112;
+  --color-background-alt3: 18 50 59;
+  --color-background-alt4: 12 35 41;
+}
+
+:root.theme_dark {
+  --color-primary-100: 23 63 74;
+  --color-primary-300: 42 114 129;
+  --color-primary-600: 132 193 203;
+  --color-primary-700: 181 219 225;
+}
+
+/* Pantallas de acceso (inicio de sesión, registro, etc.): fondo propio */
+bit-landing-layout > div {
+  background: linear-gradient(155deg, #e3f0f3 0%, #f3f8f4 50%, #e4efdc 100%) fixed;
+}
+
+.theme_dark bit-landing-layout > div {
+  background: linear-gradient(155deg, #0c2329 0%, #10262b 50%, #16291d 100%) fixed;
+}
+
+bit-landing-layout .tw-bg-background-alt {
+  background-color: transparent !important;
+}
+
+/* Sin las ilustraciones de las esquinas */
+bit-landing-layout > div > div:has(> bit-svg) {
+  display: none !important;
+}
+
+/* Emblema de la marca en lugar de la ilustración de cada pantalla */
+bit-landing-hero > div > div:first-child {
+  width: 190px !important;
+  height: 104px !important;
+  background: url("../images/emblema.png") center / contain no-repeat;
+
+  > * {
+    display: none !important;
+  }
+}
+
+/* Aviso de atribución del pie, más discreto */
+bit-landing-footer footer > div:last-child {
+  opacity: 0.55;
+}
+
+/* Logotipo del encabezado un poco más grande */
+@media (min-width: 640px) {
+  bit-landing-header header > a {
+    width: 250px !important;
+  }
+}

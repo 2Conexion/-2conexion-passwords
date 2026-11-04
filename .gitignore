@@ -1,0 +1,12 @@
+# No subir nunca configuración ni credenciales
+*.env
+!branding/marca.env
+.env*
+__pycache__/
+*.pyc
+web-vault/
+clientes/
+api/
+whmcs/
+*.sql
+*.gz
