@@ -22,7 +22,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 BRANDING = BASE / "branding"
-MARCA = "2Conexión Passwords"
+MARCA = "2Conexion Passwords"
 SEPARADOR = "<!---------------->"
 # Color de los botones de los correos (el original es un azul de Bitwarden)
 COLOR_BOTON_ORIGINAL = "#3c8dbc"

@@ -29,9 +29,9 @@ PIE = {
     "es": {
         " A modified version of the Bitwarden\u00ae Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden\u00ae server).":
             " Versión modificada de la bóveda web de Bitwarden\u00ae para Vaultwarden (una reimplementación no oficial"
-            " del servidor de Bitwarden\u00ae), adaptada por 2Conexión.",
+            " del servidor de Bitwarden\u00ae), adaptada por 2Conexion.",
         " Vaultwarden is not associated with the Bitwarden\u00ae project nor Bitwarden Inc. ":
-            " Ni 2Conexión ni Vaultwarden están asociados con el proyecto Bitwarden\u00ae ni con Bitwarden Inc."
+            " Ni 2Conexion ni Vaultwarden están asociados con el proyecto Bitwarden\u00ae ni con Bitwarden Inc."
             " Código fuente y licencias (GPL-3.0 / AGPL-3.0): {CODIGO_FUENTE} ",
     },
 }

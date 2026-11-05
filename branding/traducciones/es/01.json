@@ -164,7 +164,7 @@
 "useDifferentLoginMethod": "Usar otro método de inicio de sesión",
 "yourOrganizationRequiresSingleSignOn": "Tu organización requiere inicio de sesión único.",
 "loginPageMasterPasswordEntryScreenTitle": "Qué gusto verte de nuevo",
-"loginPageEmailEntryScreenTitle": "Inicia sesión en 2Conexión Passwords",
+"loginPageEmailEntryScreenTitle": "Inicia sesión en 2Conexion Passwords",
 "authenticationSessionTimedOut": "La sesión de autenticación expiró. Vuelve a iniciar sesión desde el principio.",
 "enterYourAccountEmailAddressAndYourPasswordHintWillBeSentToYou": "Escribe el correo electrónico de tu cuenta y te enviaremos la pista de tu contraseña",
 "invalidMasterPasswordConfirmEmailAndHost": "Contraseña maestra incorrecta. Confirma que tu correo es correcto y que tu cuenta se creó en $HOST$.",
